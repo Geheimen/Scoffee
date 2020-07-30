@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import javax.swing.JTextPane;
+import javax.swing.ToolTipManager;
 
 import cafe.CafeTipos.Sabores;
 import cafe.CafeTipos.Torra;
@@ -76,29 +77,33 @@ public class UI {
 		gbc_lblNewLabel.gridy = 0;
 		frame.getContentPane().add(lblNewLabel, gbc_lblNewLabel);
 		
-		final JCheckBox chckbxTorraClara = new JCheckBox("Clara");
-		GridBagConstraints gbc_chckbxTorraClara = new GridBagConstraints();
-		gbc_chckbxTorraClara.insets = new Insets(0, 0, 5, 5);
-		gbc_chckbxTorraClara.gridx = 0;
-		gbc_chckbxTorraClara.gridy = 1;
-		frame.getContentPane().add(chckbxTorraClara, gbc_chckbxTorraClara);
-		checkboxesTorra.add(chckbxTorraClara);
+		final JCheckBox CLARA = new JCheckBox("Clara");
+		CLARA.setToolTipText("CLARA"); // Para simplificar o código que checa se as checkboxes foram selecionadas
+		ToolTipManager.sharedInstance().setEnabled(false); //Desabilitando as tooltips, pois não queremos que esse texto apareça de fato
+		GridBagConstraints gbc_CLARA = new GridBagConstraints();
+		gbc_CLARA.insets = new Insets(0, 0, 5, 5);
+		gbc_CLARA.gridx = 0;
+		gbc_CLARA.gridy = 1;
+		frame.getContentPane().add(CLARA, gbc_CLARA);
+		checkboxesTorra.add(CLARA);
 		
-		final JCheckBox chckbxTorraMedia = new JCheckBox("M\u00E9dia");
-		GridBagConstraints gbc_chckbxTorraMedia = new GridBagConstraints();
-		gbc_chckbxTorraMedia.insets = new Insets(0, 0, 5, 5);
-		gbc_chckbxTorraMedia.gridx = 1;
-		gbc_chckbxTorraMedia.gridy = 1;
-		frame.getContentPane().add(chckbxTorraMedia, gbc_chckbxTorraMedia);
-		checkboxesTorra.add(chckbxTorraMedia);
+		final JCheckBox MEDIA = new JCheckBox("M\u00E9dia");
+		MEDIA.setToolTipText("MEDIA");
+		GridBagConstraints gbc_MEDIA = new GridBagConstraints();
+		gbc_MEDIA.insets = new Insets(0, 0, 5, 5);
+		gbc_MEDIA.gridx = 1;
+		gbc_MEDIA.gridy = 1;
+		frame.getContentPane().add(MEDIA, gbc_MEDIA);
+		checkboxesTorra.add(MEDIA);
 		
-		final JCheckBox chckbxTorraEscura = new JCheckBox("Escura");
-		GridBagConstraints gbc_chckbxTorraEscura = new GridBagConstraints();
-		gbc_chckbxTorraEscura.insets = new Insets(0, 0, 5, 0);
-		gbc_chckbxTorraEscura.gridx = 2;
-		gbc_chckbxTorraEscura.gridy = 1;
-		frame.getContentPane().add(chckbxTorraEscura, gbc_chckbxTorraEscura);
-		checkboxesTorra.add(chckbxTorraEscura);
+		final JCheckBox ESCURA = new JCheckBox("Escura");
+		ESCURA.setToolTipText("ESCURA");
+		GridBagConstraints gbc_ESCURA = new GridBagConstraints();
+		gbc_ESCURA.insets = new Insets(0, 0, 5, 0);
+		gbc_ESCURA.gridx = 2;
+		gbc_ESCURA.gridy = 1;
+		frame.getContentPane().add(ESCURA, gbc_ESCURA);
+		checkboxesTorra.add(ESCURA);
 		
 		JLabel lblNewLabel_1 = new JLabel("Escolha o(s) sabore(s) desejados()");
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
@@ -108,77 +113,86 @@ public class UI {
 		gbc_lblNewLabel_1.gridy = 2;
 		frame.getContentPane().add(lblNewLabel_1, gbc_lblNewLabel_1);
 		
-		final JCheckBox chckbxSaborCacau = new JCheckBox("Noz/Cacau");
-		GridBagConstraints gbc_chckbxSaborCacau = new GridBagConstraints();
-		gbc_chckbxSaborCacau.insets = new Insets(0, 0, 5, 5);
-		gbc_chckbxSaborCacau.gridx = 0;
-		gbc_chckbxSaborCacau.gridy = 3;
-		frame.getContentPane().add(chckbxSaborCacau, gbc_chckbxSaborCacau);
-		checkboxesSabores.add(chckbxSaborCacau);
+		final JCheckBox NOZ_CACAU = new JCheckBox("Noz/Cacau");
+		NOZ_CACAU.setToolTipText("NOZ_CACAU");
+		GridBagConstraints gbc_NOZ_CACAU = new GridBagConstraints();
+		gbc_NOZ_CACAU.insets = new Insets(0, 0, 5, 5);
+		gbc_NOZ_CACAU.gridx = 0;
+		gbc_NOZ_CACAU.gridy = 3;
+		frame.getContentPane().add(NOZ_CACAU, gbc_NOZ_CACAU);
+		checkboxesSabores.add(NOZ_CACAU);
 		
-		final JCheckBox chckbxSaborDoce = new JCheckBox("Doce");
-		GridBagConstraints gbc_chckbxSaborDoce = new GridBagConstraints();
-		gbc_chckbxSaborDoce.insets = new Insets(0, 0, 5, 5);
-		gbc_chckbxSaborDoce.gridx = 1;
-		gbc_chckbxSaborDoce.gridy = 3;
-		frame.getContentPane().add(chckbxSaborDoce, gbc_chckbxSaborDoce);
-		checkboxesSabores.add(chckbxSaborDoce);
+		final JCheckBox DOCE = new JCheckBox("Doce");
+		DOCE.setToolTipText("DOCE");
+		GridBagConstraints gbc_DOCE = new GridBagConstraints();
+		gbc_DOCE.insets = new Insets(0, 0, 5, 5);
+		gbc_DOCE.gridx = 1;
+		gbc_DOCE.gridy = 3;
+		frame.getContentPane().add(DOCE, gbc_DOCE);
+		checkboxesSabores.add(DOCE);
 		
-		final JCheckBox chckbxSaborFloral = new JCheckBox("Floral");
-		GridBagConstraints gbc_chckbxSaborFloral = new GridBagConstraints();
-		gbc_chckbxSaborFloral.insets = new Insets(0, 0, 5, 0);
-		gbc_chckbxSaborFloral.gridx = 2;
-		gbc_chckbxSaborFloral.gridy = 3;
-		frame.getContentPane().add(chckbxSaborFloral, gbc_chckbxSaborFloral);
-		checkboxesSabores.add(chckbxSaborFloral);
+		final JCheckBox FLORAL = new JCheckBox("Floral");
+		FLORAL.setToolTipText("FLORAL");
+		GridBagConstraints gbc_FLORAL = new GridBagConstraints();
+		gbc_FLORAL.insets = new Insets(0, 0, 5, 0);
+		gbc_FLORAL.gridx = 2;
+		gbc_FLORAL.gridy = 3;
+		frame.getContentPane().add(FLORAL, gbc_FLORAL);
+		checkboxesSabores.add(FLORAL);
 		
-		final JCheckBox chckbxSaborFrutado = new JCheckBox("Frutado");
-		GridBagConstraints gbc_chckbxSaborFrutado = new GridBagConstraints();
-		gbc_chckbxSaborFrutado.insets = new Insets(0, 0, 5, 5);
-		gbc_chckbxSaborFrutado.gridx = 0;
-		gbc_chckbxSaborFrutado.gridy = 4;
-		frame.getContentPane().add(chckbxSaborFrutado, gbc_chckbxSaborFrutado);
-		checkboxesSabores.add(chckbxSaborFrutado);
+		final JCheckBox FRUTADO = new JCheckBox("Frutado");
+		FRUTADO.setToolTipText("FRUTADO");
+		GridBagConstraints gbc_FRUTADO = new GridBagConstraints();
+		gbc_FRUTADO.insets = new Insets(0, 0, 5, 5);
+		gbc_FRUTADO.gridx = 0;
+		gbc_FRUTADO.gridy = 4;
+		frame.getContentPane().add(FRUTADO, gbc_FRUTADO);
+		checkboxesSabores.add(FRUTADO);
 		
-		final JCheckBox chckbxSaborAzedo = new JCheckBox("Azedo/Fermentado");
-		GridBagConstraints gbc_chckbxSaborAzedo = new GridBagConstraints();
-		gbc_chckbxSaborAzedo.insets = new Insets(0, 0, 5, 5);
-		gbc_chckbxSaborAzedo.gridx = 1;
-		gbc_chckbxSaborAzedo.gridy = 4;
-		frame.getContentPane().add(chckbxSaborAzedo, gbc_chckbxSaborAzedo);
-		checkboxesSabores.add(chckbxSaborAzedo);
+		final JCheckBox AZEDO_FERMENTADO = new JCheckBox("Azedo/Fermentado");
+		AZEDO_FERMENTADO.setToolTipText("AZEDO_FERMENTADO");
+		GridBagConstraints gbc_AZEDO_FERMENTADO = new GridBagConstraints();
+		gbc_AZEDO_FERMENTADO.insets = new Insets(0, 0, 5, 5);
+		gbc_AZEDO_FERMENTADO.gridx = 1;
+		gbc_AZEDO_FERMENTADO.gridy = 4;
+		frame.getContentPane().add(AZEDO_FERMENTADO, gbc_AZEDO_FERMENTADO);
+		checkboxesSabores.add(AZEDO_FERMENTADO);
 		
-		final JCheckBox chckbxSaborVegetal = new JCheckBox("Verde/Vegetal");
-		GridBagConstraints gbc_chckbxSaborVegetal = new GridBagConstraints();
-		gbc_chckbxSaborVegetal.insets = new Insets(0, 0, 5, 0);
-		gbc_chckbxSaborVegetal.gridx = 2;
-		gbc_chckbxSaborVegetal.gridy = 4;
-		frame.getContentPane().add(chckbxSaborVegetal, gbc_chckbxSaborVegetal);
-		checkboxesSabores.add(chckbxSaborVegetal);
+		final JCheckBox VERDE_VEGETAL = new JCheckBox("Verde/Vegetal");
+		VERDE_VEGETAL.setToolTipText("VERDE_VEGETAL");
+		GridBagConstraints gbc_VERDE_VEGETAL = new GridBagConstraints();
+		gbc_VERDE_VEGETAL.insets = new Insets(0, 0, 5, 0);
+		gbc_VERDE_VEGETAL.gridx = 2;
+		gbc_VERDE_VEGETAL.gridy = 4;
+		frame.getContentPane().add(VERDE_VEGETAL, gbc_VERDE_VEGETAL);
+		checkboxesSabores.add(VERDE_VEGETAL);
 		
-		final JCheckBox chckbxSaborEspeciarias = new JCheckBox("Especiarias");
-		GridBagConstraints gbc_chckbxSaborEspeciarias = new GridBagConstraints();
-		gbc_chckbxSaborEspeciarias.insets = new Insets(0, 0, 5, 5);
-		gbc_chckbxSaborEspeciarias.gridx = 0;
-		gbc_chckbxSaborEspeciarias.gridy = 5;
-		frame.getContentPane().add(chckbxSaborEspeciarias, gbc_chckbxSaborEspeciarias);
-		checkboxesSabores.add(chckbxSaborEspeciarias);
+		final JCheckBox ESPECIARIAS = new JCheckBox("Especiarias");
+		ESPECIARIAS.setToolTipText("ESPECIARIAS");
+		GridBagConstraints gbc_ESPECIARIAS = new GridBagConstraints();
+		gbc_ESPECIARIAS.insets = new Insets(0, 0, 5, 5);
+		gbc_ESPECIARIAS.gridx = 0;
+		gbc_ESPECIARIAS.gridy = 5;
+		frame.getContentPane().add(ESPECIARIAS, gbc_ESPECIARIAS);
+		checkboxesSabores.add(ESPECIARIAS);
 		
-		final JCheckBox chckbxSaborAssado = new JCheckBox("Assado");
-		GridBagConstraints gbc_chckbxSaborAssado = new GridBagConstraints();
-		gbc_chckbxSaborAssado.insets = new Insets(0, 0, 5, 5);
-		gbc_chckbxSaborAssado.gridx = 1;
-		gbc_chckbxSaborAssado.gridy = 5;
-		frame.getContentPane().add(chckbxSaborAssado, gbc_chckbxSaborAssado);
-		checkboxesSabores.add(chckbxSaborAssado);
+		final JCheckBox ASSADO = new JCheckBox("Assado");
+		ASSADO.setToolTipText("ASSADO");
+		GridBagConstraints gbc_ASSADO = new GridBagConstraints();
+		gbc_ASSADO.insets = new Insets(0, 0, 5, 5);
+		gbc_ASSADO.gridx = 1;
+		gbc_ASSADO.gridy = 5;
+		frame.getContentPane().add(ASSADO, gbc_ASSADO);
+		checkboxesSabores.add(ASSADO);
 		
-		final JCheckBox chckbxSaborOutros = new JCheckBox("Outros");
-		GridBagConstraints gbc_chckbxSaborOutros = new GridBagConstraints();
-		gbc_chckbxSaborOutros.insets = new Insets(0, 0, 5, 0);
-		gbc_chckbxSaborOutros.gridx = 2;
-		gbc_chckbxSaborOutros.gridy = 5;
-		frame.getContentPane().add(chckbxSaborOutros, gbc_chckbxSaborOutros);
-		checkboxesSabores.add(chckbxSaborOutros);
+		final JCheckBox OUTROS = new JCheckBox("Outros");
+		OUTROS.setToolTipText("OUTROS");
+		GridBagConstraints gbc_OUTROS = new GridBagConstraints();
+		gbc_OUTROS.insets = new Insets(0, 0, 5, 0);
+		gbc_OUTROS.gridx = 2;
+		gbc_OUTROS.gridy = 5;
+		frame.getContentPane().add(OUTROS, gbc_OUTROS);
+		checkboxesSabores.add(OUTROS);
 		
 		
 		JLabel lblNewLabel_2 = new JLabel("Caf\u00E9 Recomendado");
@@ -225,18 +239,16 @@ public class UI {
 			public void actionPerformed(ActionEvent e) {
 				if(!t.isEmpty()) t.clear();
 				if(!s.isEmpty()) s.clear();
-				if(chckbxTorraClara.isSelected()) t.add(Torra.CLARA);
-				if(chckbxTorraMedia.isSelected()) t.add(Torra.MEDIA);
-				if(chckbxTorraEscura.isSelected()) t.add(Torra.ESCURA);
-				if(chckbxSaborAssado.isSelected()) s.add(Sabores.ASSADO);
-				if(chckbxSaborAzedo.isSelected()) s.add(Sabores.AZEDO_FERMENTADO);
-				if(chckbxSaborDoce.isSelected()) s.add(Sabores.DOCE);
-				if(chckbxSaborEspeciarias.isSelected()) s.add(Sabores.ESPECIARIAS);
-				if(chckbxSaborFloral.isSelected()) s.add(Sabores.FLORAL);
-				if(chckbxSaborFrutado.isSelected()) s.add(Sabores.FRUTADO);
-				if(chckbxSaborCacau.isSelected()) s.add(Sabores.NOZ_CACAU);
-				if(chckbxSaborOutros.isSelected()) s.add(Sabores.OUTROS);
-				if(chckbxSaborVegetal.isSelected()) s.add(Sabores.VERDE_VEGETAL);
+				
+				//Adicionando torras
+				for (JCheckBox cb: checkboxesTorra) {
+					if(cb.isSelected()) t.add(Torra.valueOf(cb.getToolTipText()));
+				}
+
+				//Adicionando sabores
+				for (JCheckBox cb: checkboxesSabores) {
+					if(cb.isSelected()) s.add(Sabores.valueOf(cb.getToolTipText()));
+				}
 				
 				if(t.isEmpty()) {
 					int j = JOptionPane.showConfirmDialog(frame,
